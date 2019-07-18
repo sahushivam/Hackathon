@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/customStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">hire4drive</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse" id = "navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#login"><a href="#" class="nav-link">Login</a></button></li>
+
+				<li class="nav-item"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#signUp"><a href="#" class="nav-link">Sing Up</a></button></li>
+			</ul>
+		</div>	
+	</nav>
+
+	<div class="modal fade" id="login">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Login</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	        	<div class="input-group input-group-lg input-container">
+    				<i class="fa fa-user icon fa-2x"></i>
+   					<input class="form-control" type="text" placeholder="Username" name="username">
+				</div>
+	        	<div class="input-group input-group-lg input-container">
+    				<i class="fa fa-envelope icon fa-2x"></i>
+   					<input class="form-control" type="email" placeholder="E-mail" name="email">
+				</div>
+				<div class="input-group input-group-lg input-container">
+    				<i class="fa fa-key icon fa-2x"></i>
+   					<input class="form-control" type="password" placeholder="Password" name="password">
+				</div>	        	
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Login</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="signUp">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Sign Up</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	        	<div class="input-group input-group-lg input-container">
+    				<!-- <i class="fa fa-user icon fa-2x"></i> -->
+   					<input class="form-control" type="text" placeholder="Name" name="name">
+				</div>
+	        	<div class="input-group input-group-lg input-container">
+    				<!-- <i class="fa fa-user icon fa-2x"></i> -->
+   					<input class="form-control" type="text" placeholder="Username" name="username">
+				</div>
+	        	<div class="input-group input-group-lg input-container">
+    				<!-- <i class="fa fa-envelope icon fa-2x"></i> -->
+   					<input class="form-control" type="email" placeholder="E-mail" name="email">
+				</div>
+				<div class="input-group input-group-lg input-container">
+    				<!-- <i class="fa fa-key icon fa-2x"></i> -->
+   					<input class="form-control" type="password" placeholder="Choose Password" name="password">
+				</div>
+				<div class="input-group input-group-lg input-container">
+    				<!-- <i class="fa fa-key icon fa-2x"></i> -->
+   					<input class="form-control" type="number" placeholder="Mobile Number" name="mobileNumber">
+				</div>	        	
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Sign Up</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</body>
+</html>
