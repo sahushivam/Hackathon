@@ -1,5 +1,29 @@
-body{
-	margin-top:60px;
+html, body{
+  height: 100%;
+  width: 100%;
+  color: #222;
+}
+
+.navbar {
+  padding: 12 px;
+}
+
+.navbar-nav li{
+  padding-left: 20px;
+}
+
+.nav-link{
+  font-size: 1.5em !important;
+}
+
+.main-slide{
+  text-align: center;
+  background-image: url("../img/taxi.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .input-container {
@@ -15,4 +39,9 @@ body{
   color: white;
   min-width: 50px;
   text-align: center;
+}
+
+.logo_img{
+  height: 70px;
+  width: 280px;
 }
