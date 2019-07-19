@@ -2,12 +2,16 @@
 <html>
 <head>
 	<title>Home</title>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/customStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
@@ -18,16 +22,16 @@
 			</button>
 		</div>
 		<div class="navbar-collapse collapse" id = "navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Service</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+			<ul class="navbar-nav mr-auto nav nav-tabs">
+				<li class="nav-item active"><a data-toggle="tab" href="#home" class="nav-link">Home</a></li>
+				<li class="nav-item"><a data-toggle="tab" href="#services" class="nav-link">Services</a></li>
+				<li class="nav-item"><a data-toggle="tab" href="#contact" class="nav-link">Contact</a></li>
+				<li class="nav-item"><a data-toggle="tab" href="#about" class="nav-link">About</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="nav-item"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#login"><a href="#" class="nav-link">Login</a></button></li>
+				<li class="nav-item" style="margin: 2px;"><div data-toggle="modal" data-target="#login"><a href="#" class="nav-link">Login<i class="fa fa-sign-in"></i></a></li>
 
-				<li class="nav-item"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#signUp"><a href="#" class="nav-link">Sing Up</a></button></li>
+				<li class="nav-item" style="margin: 2px;"><div data-toggle="modal" data-target="#signUp"><a href="#" class="nav-link">Sign Up<i class="fa fa-hand-o-up" style="margin: 1px;"></i></a></li>
 			</ul>
 		</div>	
 	</nav>
@@ -103,6 +107,22 @@
 	    </div>
 	  </div>
 	</div>
+
+	<!--Tab content-->
+	<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+  </div>
+  <div id="services" class="tab-pane fade">
+    <h3>Services</h3>
+  </div>
+   <div id="contact" class="tab-pane fade">
+    <h3>Contact</h3>
+  </div>
+   <div id="about" class="tab-pane fade">
+    <h3>About</h3>
+  </div>
+</div>
 
 </body>
 </html>
