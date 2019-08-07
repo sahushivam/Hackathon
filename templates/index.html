@@ -4,36 +4,37 @@
 	<title>Home</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../style/customStyle.css">
+	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/style/customStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preload" href="../img/taxi.jpg" as="image">
+    <link rel="preload" href="../static/img/taxi.jpg" as="image">
 
 </head>
-<body>
+
 	<!-- <Navigation> -->
+<header>
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="../img/logo.png" class="logo_img"></a>
+			<a class="navbar-brand" href="#"><img src="../static/img/logo.png" class="logo_img"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Home</a>
+						<a class="nav-link active" href="/home/">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
+						<a class="nav-link" href="/about/">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Service</a>
+						<a class="nav-link" href="/service/">Service</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+						<a class="nav-link" href="/contact/">Contact</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -44,6 +45,13 @@
 			</div>
 		</div>
 	</nav>
+</header>
+    <!-- <Navigation Ends Here> -->
+<body>
+    <div>
+        {% block body %}{% endblock %}
+    </div>
+</body>
 
 
 	<!-- <Login Model> -->
@@ -78,6 +86,8 @@
 	    </div>
 	  </div>
 	</div>
+    <!-- <Login Model Ends Here> -->
+
 
 
 	<!-- <Sign Up Model> -->
@@ -115,144 +125,46 @@
 	    </div>
 	  </div>
 	</div>
-
-
-
-	<!-- <Image Slider> -->
-	<div class="main-slide">
-		<div class="row">
-			
-		</div>
-	</div>
-
-
-    <!-- <Welcome Section> -->
-    <div class="container-fluid padding">
-    	<div class="row welcome text-center padding">
-    		<div class="col-12">
-    			<h1 class="display-4 green"> <strong>easy4drive </h1>
-    		</div>
-    		<hr>
-    		<div class="col-12">
-    			<p class="lead" style="margin-top: 20px">
-				Ezi Drive is the Pioneer & Leader in Driver Hire services and one of the leading providers of Cab Hire and Online Cab booking services in Bangalore and Chennai. EziDrive has a large pool of experienced, reliable (background verified) and professional car drivers for hire in Chennai and Bangalore having thorough knowledge of the city
-				</p>
-    		</div>
-    	</div>
-    </div>
-
-    <!-- <Why Choose Block> -->
-    <div class="container-fluid padding">
-    	<div class="row welcome text-center padding">
-    		<div class="col-12 padding">
-    			<h1 class="display-5"> Why <strong class="green">easy4drive ? </strong></h1>
-    		</div>
-    		<hr>
-    		<div class="col-xs-12 col-sm-6 col-md-4">
-    			<i class="fa fa-inr fa-4x" aria-hidden="true"></i>
-    			<h3 class="green">Affordable Rates</h3>
-    			<p>Rent a car or book a driver for outstation or hourly service at <strong class="yellow">Lowest cost</strong></p>
-    		</div>
-    		<div class="col-xs-12 col-sm-6 col-md-4">
-    			<i class="fa fa-users fa-4x" aria-hidden="true"></i>
-    			<h3 class="green">Expertise & Premium</h3>
-    			<p>We have Served to <strong class="yellow">80000+</strong> Customers with <strong class="yellow">100000+</strong> safe Rides</p>
-    		</div>
-    		<div class="col-xs-12 col-sm-6 col-md-4">
-    			<i class="fa fa-shield fa-4x" aria-hidden="true"></i>
-    			<h3 class="green">Reliable & Verified Partners</h3>
-    			<p>Our car driver Partners are verified and trusted as all driver undergo Police Verification and are <strong class="yellow">3+ year experienced.</strong></p>
-    		</div>    		
-    	</div>
-    </div>
-
-    <!-- <How it Work Block> -->
-    <div class="container-fluid padding">
-    	<div class="row welcome text-center padding">
-    		<div class="col-12">
-    			<h1 class="display-5"> How it <strong style="color: #11a597">Work ?</strong></h1>
-    			<p>Get booking in 3 easy step</p>
-    		</div>
-    		<br><br>
-    		<hr>
-    		<div class="container-fluid row road">
-    			<div class="col-xs-12 col-sm-6 col-md-4">
-	    			<figure><img src="../img/hire-driver.png" ></figure>
-					<p>
-						Choose Service to Hire a<br>
-						<strong class="yellow">Cab</strong>
-						or
-						<strong class="yellow">Driver</strong> 
-					</p>
-    			</div>
-    			<div class="col-xs-12 col-sm-6 col-md-4">
-	    			<figure><img src="../img/map.png"></figure>
-					<p>
-						Set your <strong class="yellow">location</strong>
-					</p>
-    			</div>
-    			<div class="col-xs-12 col-sm-6 col-md-4">
-	    			<figure><img src="../img/trip.png" ></figure><br>
-					<p>
-						Enjoy your <strong class="yellow">Trip</strong>
-					</p>
-    			</div> 	    			
-    		</div>	
-    	</div>
-    </div>
-
-    <!-- <Connect> -->
-    <div class="container-fluid padding">
-    	<div class="row text-center padding">
-    		<div class="col-12">
-    			<h2>Connect</h2>
-    		</div>
-    		<div class="col-12 social padding">
-    			<a href="#"><i class="fa fa-facebook"></i></a>
-    			<a href="#"><i class="fa fa-twitter"></i></a>
-    			<a href="#"><i class="fa fa-instagram"></i></a>
-    			<a href="#"><i class="fa fa-youtube"></i></a>
-    		</div>
-    	</div>
-    </div>
+    <!-- <Sign UP Model Ends here> -->
 
 
     <!-- <Footer> -->
     <footer>
-    	<div class="container-fluid padding">
-    		<div class="row text-center">
-    			<div class="col-md-4">
-    				<hr class="light" style="margin-top: 30px">
-    				<h5>Contact - Detail</h5>
-    				<hr class="light">
-    				<p>1800-547-456</p>
-    				<p>hire4drive@gmail.com</p>
-    				<p>100 M.G road</p>
-    				<p>city,state,000000</p>
-    			</div>
-    			<div class="col-md-4">
-    				<hr class="light" style="margin-top: 30px">
-    				<h5>Working Hours</h5>
-    				<hr class="light">
-    				<p>Monday-Friday: 24hr</p>
-    				<p> Saturday: 5am - 10pm</p>
-    				<p>Sunday: Closed</p>
-    			</div>
-    			<div class="col-md-4">
-    				<hr class="light" style="margin-top: 30px">
-    				<h5>Service Area</h5>
-    				<hr class="light">
-    				<p>Banglore</p>
-    				<p>Delhi-NCR</p>
-    				<p>Mumbai</p>
-    				<p>Pune</p>
-    			</div>
-    			<div class="col-12">
-    				<hr class="light-1">
-    				<h5>&copy hire4drive.com</h5>    				
-    			</div>
-    		</div>
-    	</div>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="light" style="margin-top: 30px">
+                    <h5>Contact - Detail</h5>
+                    <hr class="light">
+                    <p>1800-547-456</p>
+                    <p>hire4drive@gmail.com</p>
+                    <p>100 M.G road</p>
+                    <p>city,state,000000</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" style="margin-top: 30px">
+                    <h5>Working Hours</h5>
+                    <hr class="light">
+                    <p>Monday-Friday: 24hr</p>
+                    <p> Saturday: 5am - 10pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" style="margin-top: 30px">
+                    <h5>Service Area</h5>
+                    <hr class="light">
+                    <p>Banglore</p>
+                    <p>Delhi-NCR</p>
+                    <p>Mumbai</p>
+                    <p>Pune</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-1">
+                    <h5>&copy hire4drive.com</h5>                   
+                </div>
+            </div>
+        </div>
     </footer>
-</body>
+    <!-- <Footer Section Ends Here> -->
+
 </html>
