@@ -14,7 +14,8 @@ app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
 #create table user(id int NOT NULL AUTO_INCREMENT,name varchar(45) NULL,username varchar(45) NULL,email varchar(45) NOT NULL,password varchar(50) NOT NULL,mobile varchar(15) NOT NULL, PRIMARY KEY(id));
-
+#alter table user add options VARCHAR(2)
+#alter table user add address VARCHAR(250)
 #Stored Procedure used to create User
 #DELIMITER $$
 # mysql> CREATE DEFINER=`root`@`localhost` PROCEDURE `createUser`(
@@ -23,6 +24,8 @@ mysql.init_app(app)
 #     -> IN p_email VARCHAR(100),
 #     -> IN p_password VARCHAR(1000),
 #     -> IN p_mobile VARCHAR(100)
+#     -> IN p_option VARCHAR(2)
+#     -> IN p_address VARCHAR(1000)
 #     -> )
 #     -> BEGIN
 #     -> IF(select exists(select 1 from user where email=p_email)) THEN
@@ -30,14 +33,16 @@ mysql.init_app(app)
 #     -> ELSE
 #     -> insert into user
 #     -> (
-#     -> name, username, email, password, mobile)
+#     -> name, username, email, password, mobile,option,address)
 #     -> values
 #     -> (
 #     -> p_name,
 #     -> p_username,
 #     -> p_email,
 #     -> p_password,
-#     -> p_mobile
+#     -> p_mobile,
+#     -> p_option,
+#     -> p_address
 #     -> );
 #     -> END IF;
 #     -> END$$
@@ -67,7 +72,8 @@ def signUp():
         _email = request.form['email']
         _password = request.form['password']
         _mobile=request.form['mobileNumber']
-        
+        _address=request.form['address']
+        _option=request.form['DorC']
 
         # validate the received values
         if _name and _email and _password:
@@ -77,7 +83,7 @@ def signUp():
             with closing(mysql.connect()) as conn:
                 with closing(conn.cursor()) as cursor:
                     _hashed_password = generate_password_hash(_password)
-                    cursor.callproc('createUser',(_name,_username,_email,_hashed_password,_mobile))
+                    cursor.callproc('createUser',(_name,_username,_email,_hashed_password,_mobile,_address,_option))
                     data = cursor.fetchall()
 
                     if len(data) is 0:
