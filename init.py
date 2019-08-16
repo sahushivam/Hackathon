@@ -62,11 +62,12 @@ def contact():
 @app.route('/',methods=['POST'])
 def signUp():
     try:
-        _name = request.form['inputName']
-        _username=request.json['username']
-        _email = request.form['inputEmail']
-        _password = request.form['inputPassword']
-        _mobile=request.json['mobileNumber']
+        _name = request.form['name']
+        _username=request.form['username']
+        _email = request.form['email']
+        _password = request.form['password']
+        _mobile=request.form['mobileNumber']
+        
 
         # validate the received values
         if _name and _email and _password:
